@@ -12,11 +12,18 @@ export function Header({ isLoggedIn, loginMsg, username, roles }) {
 			{isLoggedIn && (
 				<React.Fragment>
 					{roles.includes("user") && (
-						<li>
-							<NavLink activeClassName="active" to="/user">
-								Cats & Dogs
-							</NavLink>
-						</li>
+						<>
+							<li>
+								<NavLink activeClassName="active" to="/search">
+									Search
+								</NavLink>
+							</li>
+							<li>
+								<NavLink activeClassName="active" to="/user">
+									Cats & Dogs
+								</NavLink>
+							</li>
+						</>
 					)}
 					{roles.includes("admin") && (
 						<li>

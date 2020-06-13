@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { Header } from "./Header";
 import { Home } from "./Home";
 import { Login } from "./Login";
 import { User } from "./User";
 import { Admin } from "./Admin";
+import { Search } from "./Search";
 import "./App.css";
 
 export default function App() {
@@ -27,6 +28,9 @@ export default function App() {
 				<Switch>
 					<Route exact path="/">
 						<Home />
+					</Route>
+					<Route exact path="/search">
+						<Search />
 					</Route>
 					<Route exact path="/user">
 						<User />
